@@ -1,0 +1,19 @@
+update lineorder
+set lo_tax = lo_tax
+where lo_orderkey between 1000000 and 5000000;
+
+update lineorder_query_low
+set lo_tax = lo_tax
+where lo_orderkey between 1000000 and 5000000;
+
+update lineorder_query_high
+set lo_tax = lo_tax
+where lo_orderkey between 1000000 and 5000000;
+
+update lineorder_archive_low
+set lo_tax = lo_tax
+where lo_orderkey between 1000000 and 5000000;
+
+update lineorder_archive_high
+set lo_tax = lo_tax
+where lo_orderkey between 1000000 and 5000000;

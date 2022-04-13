@@ -1,0 +1,18 @@
+truncate table lineorder_x8_query_low;
+truncate table lineorder_x8_query_high;
+truncate table lineorder_x8_archive_low;
+truncate table lineorder_x8_archive_high;
+
+insert /*+ append */ into lineorder_x8_query_low
+select * from lineorder_x8;
+
+insert /*+ append */ into lineorder_x8_query_high
+select * from lineorder_x8;
+
+insert /*+ append */ into lineorder_x8_archive_low
+select * from lineorder_x8;
+
+insert /*+ append */ into lineorder_x8_archive_high
+select * from lineorder_x8;
+
+commit;

@@ -1,0 +1,11 @@
+select max(lo_tax) from lineorder;
+select max(lo_tax) from lineorder_query_low;
+select max(lo_tax) from lineorder_query_high;
+select max(lo_tax) from lineorder_archive_low;
+select max(lo_tax) from lineorder_archive_high;
+
+select max(lo_tax) from lineorder_x8;
+select max(lo_tax) from lineorder_x8_query_low;
+select max(lo_tax) from lineorder_x8_query_high;
+select max(lo_tax) from lineorder_x8_archive_low;
+select max(lo_tax) from lineorder_x8_archive_high;

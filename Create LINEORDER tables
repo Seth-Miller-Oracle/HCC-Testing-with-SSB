@@ -1,0 +1,41 @@
+CREATE TABLE lineorder
+(
+lo_orderkey        INTEGER NOT NULL,
+lo_linenumber      NUMBER(1, 0) NOT NULL,
+lo_custkey         INTEGER NOT NULL,
+lo_partkey         INTEGER NOT NULL,
+lo_suppkey         INTEGER NOT NULL,
+lo_orderdate       NUMBER(8,0) NOT NULL,
+lo_orderpriority   CHAR(15) NOT NULL,
+lo_shippriority    CHAR(1) NOT NULL,
+lo_quantity        NUMBER(2, 0) NOT NULL,
+lo_extendedprice   NUMBER NOT NULL,
+lo_ordtotalprice   NUMBER NOT NULL,
+lo_discount        NUMBER(2, 0) NOT NULL,
+lo_revenue         NUMBER NOT NULL,
+lo_supplycost      NUMBER NOT NULL,
+lo_tax             NUMBER(1, 0) NOT NULL,
+lo_commitdate      NUMBER(8,0) NOT NULL,
+lo_shipmode        CHAR(10) NOT NULL
+);
+
+
+create table lineorder_query_low
+compress for query low as
+select * from lineorder
+where 1=0;
+
+create table lineorder_query_high
+compress for query high as
+select * from lineorder
+where 1=0;
+
+create table lineorder_archive_low
+compress for archive low as
+select * from lineorder
+where 1=0;
+
+create table lineorder_archive_high
+compress for archive high as
+select * from lineorder
+where 1=0;
