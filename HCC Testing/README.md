@@ -1,1 +1,0 @@
-Code repository for Oracle Hybrid Columnar Compression (HCC) testing on Exadata.
